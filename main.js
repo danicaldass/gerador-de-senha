@@ -1,16 +1,14 @@
-const numeroSenha = document.querySelector (".parametro-senha___texto")
-
+const numeroSenha = document.querySelector('.parametro-senha__texto')
 
 tamanhoSenha = 8
 numeroSenha.textContent = tamanhoSenha;
 
-const botoes = document.querySelectorAll(document".parametro-senha___botao")
+const botoes = document.querySelectorAll(".parametro-senha__botao")
 
-
-botoes[1].onclick = diminuir;
+botoes[0].onclick = diminuir;
 
 function diminuir() {
-    tamanhoSenha;
+    tamanhoSenha--;
     numeroSenha.textContent = tamanhoSenha;
 }
 
