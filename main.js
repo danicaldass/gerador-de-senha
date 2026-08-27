@@ -1,4 +1,16 @@
 const numeroSenha = document.querySelector('.parametro-senha__texto')
+const campoSenha = document.querySelector('#campo-senha')
+
+campoSenha.value = 'gin de 10'
+
+let LetrasMaiusculas = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+
+let Letrasminucsculas = 'abcdefghijklmnopqrstuvwxyz'
+
+let numeros = '0123456789'
+
+let simbolos = @#$%¨&*
+
 
 tamanhoSenha = 8
 numeroSenha.textContent = tamanhoSenha;
