@@ -1,15 +1,15 @@
 const numeroSenha = document.querySelector('.parametro-senha__texto')
 const campoSenha = document.querySelector('#campo-senha')
 
-campoSenha.value = 'gin de 10'
+campoSenha.value = 'caldas'
 
 let LetrasMaiusculas = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
 
-let Letrasminucsculas = 'abcdefghijklmnopqrstuvwxyz'
+let Letrasminusculas = 'abcdefghijklmnopqrstuvwxyz'
 
 let numeros = '0123456789'
 
-let simbolos = @#$%¨&*
+let simbolos = '@#$%¨&*'
 
 
 tamanhoSenha = 8
@@ -22,6 +22,7 @@ botoes[0].onclick = diminuir;
 function diminuir() {
     tamanhoSenha--;
     numeroSenha.textContent = tamanhoSenha;
+    geraSenha()
 }
 
 botoes[1].onclick = aumentar;
@@ -30,3 +31,16 @@ function aumentar() {
     tamanhoSenha++;
     numeroSenha.textContent = tamanhoSenha;
 }
+
+geraSenha()
+
+function geraSenha(){
+    let senha = ''
+    for(let i = 0; i < tamanhoSenha; i++){
+        let numeroAleatorio = Math.random() * 26;
+        numeroAleatorio = Math.floor(numeroAleatorio)
+        senha = senha + LetrasMaiusculas[numeroAleatorio]
+        }
+        campoSenha.value = senha;
+
+    }
